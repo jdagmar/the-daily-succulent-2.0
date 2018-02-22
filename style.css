@@ -1,57 +1,57 @@
-@supports (display: grid) {
-    body {
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: repeat(12, 1fr);
-    }
 
-    header {
-        grid-column: span 12;
-    }
-
-    main {
-        grid-column-start: 3;
-        grid-column-end: 7;
-    }
-
-    aside {
-        grid-column-start: 9;
-        grid-column-end: 11;
-    }
-
-    .aside-hr {
-        grid-column-start: 8;
-    }
-
-    footer {
-        grid-column: span 12;
-    }
-
-    .species-gallery {
-        margin-bottom: 40px;
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
-    .regular-gallery {
-        width: 500px;
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    }
+/* fallback css if browser don't support grid */
+body {
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
+aside {
+    margin: 20px;
+    max-width: 200px;
+}
+
+aside {
+    margin-right: 200px;
+}
+
+main {
+    margin-left: 200px;
+}
+
+main {
+    max-width: 550px;
+}
+
+.species-gallery,
+.regular-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.species-gallery__image,
+.regular-gallery__image {
+    object-fit: cover;
+}
+
+.species-gallery__image {
+    margin: 20px;
+    max-width: 235px;
+}
+
+.regular-gallery__image {
+    margin: 10px;
+    max-width: 115px;
+    max-width: 115px;
+}
+
+
+/* always apply */
 body {
     margin: 0px;
     color: #141414;
-
-    margin: 0px auto;
-}
-
-main,
-aside {
-    margin: 0px auto;
+    box-sizing: border-box;
 }
 
 hr {
@@ -93,6 +93,7 @@ hr {
     margin: 10px 0px 20px 0px;
 }
 
+.species-gallery,
 .regular-gallery {
     margin-bottom: 50px;
 }
@@ -104,12 +105,6 @@ hr {
 
 figure {
     margin: 0px;
-}
-
-.species-gallery__image,
-.regular-gallery__image {
-    max-width: 100%;
-    object-fit: cover;
 }
 
 .species-gallery__caption {
@@ -157,4 +152,58 @@ footer {
     background-color: #141414;;
     width: 100%;
     height: 50px;
+}
+
+@supports (display: grid) {
+    body {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    main,
+    aside {
+        margin: 0px auto;
+    }
+
+    header {
+        grid-column: span 12;
+    }
+
+    main {
+        grid-column-start: 3;
+        grid-column-end: 7;
+    }
+
+    aside {
+        grid-column-start: 9;
+        grid-column-end: 11;
+    }
+
+    .aside-hr {
+        grid-column-start: 8;
+    }
+
+    footer {
+        grid-column: span 12;
+    }
+
+    .species-gallery {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .regular-gallery {
+        width: 500px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .species-gallery__image,
+    .regular-gallery__image {
+        max-width: 100%;
+        object-fit: cover;
+    }
 }
