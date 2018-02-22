@@ -1,0 +1,160 @@
+@supports (display: grid) {
+    body {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    header {
+        grid-column: span 12;
+    }
+
+    main {
+        grid-column-start: 3;
+        grid-column-end: 7;
+    }
+
+    aside {
+        grid-column-start: 9;
+        grid-column-end: 11;
+    }
+
+    .aside-hr {
+        grid-column-start: 8;
+    }
+
+    footer {
+        grid-column: span 12;
+    }
+
+    .species-gallery {
+        margin-bottom: 40px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .regular-gallery {
+        width: 500px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+body {
+    margin: 0px;
+    color: #141414;
+
+    margin: 0px auto;
+}
+
+main,
+aside {
+    margin: 0px auto;
+}
+
+hr {
+    border-bottom: none;
+}
+
+.header-logo {
+    font-family: 'Josefin Sans';
+    text-align: center;
+}
+
+.nav-bar {
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-bar__item {
+    margin: 10px;
+    display: inline-block;
+    font-family: 'Open Sans Condensed';
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.species-header,
+.regular-gallery-header,
+.blog-post-header {
+    font-family: 'Open Sans Condensed';
+    font-size: 2rem;
+    text-align: center;
+}
+
+.species-header {
+    margin: 10px 0px 20px 0px;
+}
+
+.regular-gallery {
+    margin-bottom: 50px;
+}
+
+.blog-post-header {
+    margin: 10px 0px;
+    text-align: left;
+}
+
+figure {
+    margin: 0px;
+}
+
+.species-gallery__image,
+.regular-gallery__image {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.species-gallery__caption {
+    font-family: 'Open Sans Condensed';
+    text-align: center;
+}
+
+.regular-gallery__image {
+    height: 100px;
+    object-fit: cover;
+}
+
+.blog-post {
+    font-family: 'Open Sans Condensed';
+}
+
+.blog-post__header {
+    margin: 10px 0px;
+}
+
+.blog-post__image {
+    width: 100%;
+}
+
+.blog-post__excerpt,
+.blog-post__link {
+    margin: 5px 0px;
+    font-size: 0.9rem;
+}
+
+.blog-post__link {
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-style: italic;
+}
+
+.blog-post__icon {
+    margin-left: 5px;
+    width: 0.8rem;
+}
+
+footer {
+    background-color: #141414;;
+    width: 100%;
+    height: 50px;
+}
