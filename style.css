@@ -2,9 +2,15 @@
 /* fallback css if browser don't support grid */
 body {
     margin: 20px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 aside {
@@ -26,13 +32,17 @@ main {
 
 .species-gallery,
 .regular-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .species-gallery__image,
 .regular-gallery__image {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .species-gallery__image {
@@ -51,7 +61,8 @@ main {
 body {
     margin: 0px;
     color: #141414;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 hr {
@@ -78,7 +89,8 @@ hr {
 .hero-image {
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .species-header,
@@ -114,7 +126,8 @@ figure {
 
 .regular-gallery__image {
     height: 100px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .blog-post {
@@ -137,9 +150,15 @@ figure {
 
 .blog-post__link {
     margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     font-style: italic;
 }
 
@@ -204,6 +223,7 @@ footer {
     .species-gallery__image,
     .regular-gallery__image {
         max-width: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
 }
